@@ -1,0 +1,172 @@
+.container {
+}
+
+.recipe {
+    width: 100%;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    background-color: var(--block-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.image {
+    width: 400px;
+    height: 400px;
+    box-shadow: var(--shadow);
+    object-fit: cover;
+}
+
+.form {
+    width: 550px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    display: flex;
+    padding: 4px;
+    font-size: 1.1rem;
+}
+
+.label input{
+    padding: 0;
+}
+
+.inputName {
+    width: calc(100% - 100px);
+}
+
+.inputImage {
+    width: calc(100% - 220px);
+}
+
+.textarea {
+    width: calc(100% - 100px);
+    height: 200px;
+    resize: none;
+    padding: 0;
+}
+
+.category {
+    cursor: pointer;
+}
+
+.ingredientsLabel {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.ingredientsContainer {
+    margin: 10px 0 0;
+}
+
+.ingredientLabel {
+    display: flex;
+}
+
+.ingredientNumber {
+    width: 115px;
+}
+
+.cookingStepNumber {
+    width: 57px;
+}
+
+.ingredientInput {
+    width: calc(100% - 160px);
+}
+
+.cookingStepsInput {
+    width: calc(100% - 100px);
+}
+
+.cross {
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.littleButton {
+    padding: 5px;
+    width: 200px;
+}
+
+.submit {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.button {
+    width: 200px;
+}
+
+.popup{
+    position: fixed;
+    width: 300px;
+    top: 300px;
+    left: calc(50% - 150px);
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-shadow: var(--shadow);
+    background-color: var(--block-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+    .image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .form {
+        width: 400px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .recipe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .form {
+        width: 90vw;
+        margin-top: 0;
+    }
+
+    .label {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .inputName {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .inputImage {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .textarea {
+        width: 100%;
+        height: 300px;
+        margin-left: 0;
+    }
+
+    .category {
+        margin-left: 0;
+    }
+}

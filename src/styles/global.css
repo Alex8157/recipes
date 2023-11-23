@@ -1,0 +1,59 @@
+:root {
+  --background-color: white;
+  --second-color: #f5f8fb;
+  --block-color: #f5f8fb;
+  --button-color: #4ca0ff;
+  --button-hover-color: #3087ea;
+  --button-font-color: #ffffff;
+  --shadow: 0 0 10px rgba(183, 195, 210, 0.70);
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #434c58;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+.input {
+  padding: 4px 4px 2px;
+  margin: 0 0 16px 8px;
+  background-color: #0000;
+  border: none;
+  border-bottom: 1px solid var(--button-color);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.textarea {
+  padding: 4px 4px 2px;
+  margin: 0 0 16px 8px;
+  background-color: #0000;
+  border: 1px solid var(--button-color);
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.button {
+  padding: 10px;
+  background-color: var(--button-color);
+  color: var(--button-font-color);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--button-hover-color);
+}

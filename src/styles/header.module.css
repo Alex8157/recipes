@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+    background-color: var(--second-color);
+    box-shadow: var(--shadow);
+}
+
+.expectation:hover {
+    background-color: var(--button-color);
+    cursor: default;
+}
