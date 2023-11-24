@@ -19,7 +19,7 @@ const Layout = () => {
             const status = await PostService.checkAuth();
             setAuth(status);
             setExpectation(false);
-            if (!status && window.location.pathname !== '/' && !regex.test(window.location.pathname)) {
+            if (!status && window.location.pathname !== '/' && !regex.test(window.location.href)) {
                 navigate('/');
             }
         })()
