@@ -10,6 +10,7 @@ const Layout = () => {
     const [expectation, setExpectation] = React.useState(false);
     const [authForm, setAuthForm] = React.useState(false);
 
+    const regex = /\/recipes\/\d{1,}$/;
     const navigate = useNavigate();
 
     React.useEffect(() => {
@@ -18,21 +19,18 @@ const Layout = () => {
             const status = await PostService.checkAuth();
             setAuth(status);
             setExpectation(false);
-            if (!status && window.location.pathname !== '/' && !window.location.pathname.startsWith('/recipes/')) {
+            if (!status && window.location.pathname !== '/' && !regex.test(window.location.pathname)) {
                 navigate('/');
             }
         })()
     },[])
 
-
     return (
         <>
             <Header auth={auth} expectation={expectation} changeAuthForm={() => setAuthForm(prev => !prev)}/>
-            {(auth || window.location.pathname.startsWith('/recipes/')) &&
-                <main className={styles.container}>
-                    <Outlet/>
-                </main>
-            }
+            <main className={styles.container}>
+                <Outlet/>
+            </main>
             { authForm && <AuthForm closeAuthForm={() => setAuthForm(false)}/> }
         </>
     );

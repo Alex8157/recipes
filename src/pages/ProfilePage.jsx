@@ -39,11 +39,11 @@ const ProfilePage = () => {
     };
 
     return (
-        <div>
+        <article className={styles.profile}>
             <div>
                 <label>
                     Почта:
-                    <input className='input' type="text" value={email} readOnly />
+                    <input className={`input ${styles.post}`} type="text" value={email} readOnly />
                 </label>
             </div>
             <div>
@@ -86,7 +86,7 @@ const ProfilePage = () => {
                     <span onClick={() => setMessage('')} className={styles.cross}>&times;</span>
                 </div>
             )}
-        </div>
+        </article>
     );
 };
 

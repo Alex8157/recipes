@@ -14,9 +14,9 @@ const App = () => {
           <Route index element={<StartPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/categories/:category" element={<CategoryPage />} />
-          <Route path="/recipes" element={<CategoryPage />} />
-          <Route path="/add-recipes" element={<AddEditRecipe />} />
+          <Route path="/recipes" element={<CategoryPage key="recipes" />} />
           <Route path="/edit-recipes/:recipe" element={<AddEditRecipe />} />
+          <Route path="/add-recipes" element={<AddEditRecipe key="add-recipe" />} />
           <Route path="/recipes/:recipe" element={<RecipePage />} />
         </Route>
       </Routes>

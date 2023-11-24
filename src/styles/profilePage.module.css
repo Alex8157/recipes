@@ -1,4 +1,8 @@
-.popupWithButtons{
+.post {
+    width: 81.5%;
+}
+
+.popupWithButtons {
     position: fixed;
     width: 300px;
     top: 100px;
@@ -12,7 +16,7 @@
     align-items: center;
 }
 
-.popup{
+.popup {
     position: fixed;
     width: 300px;
     top: 100px;
@@ -26,13 +30,20 @@
     justify-content: space-between;
 }
 
-.buttonRow{
+.buttonRow {
     display: flex;
     gap: 5px;
     margin: 5px;
 }
 
-.cross{
+.cross {
     font-size: 30px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .profile input {
+        width: 100%;
+        margin: 8px 0 16px;
+    }
 }

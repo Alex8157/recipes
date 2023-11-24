@@ -35,3 +35,22 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+.popup {
+    position: fixed;
+    width: 300px;
+    top: 320px;
+    left: calc(50% - 150px);
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-shadow: var(--shadow);
+    background-color: var(--block-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popupCross {
+    font-size: 30px;
+    cursor: pointer;
+}

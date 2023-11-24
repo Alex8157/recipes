@@ -6,6 +6,7 @@ const AuthForm = ({closeAuthForm}) => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [isRegistering, setIsRegistering] = React.useState(false);
+  const [message, setMessage] = React.useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,6 +16,7 @@ const AuthForm = ({closeAuthForm}) => {
         result = await PostService.registration({ email, password });
     } else {
         result = await PostService.login({ email, password });
+        if (!result) setMessage('Неверные данные для входа');
     }
     if (result) window.location.reload();
   };
@@ -52,6 +54,12 @@ const AuthForm = ({closeAuthForm}) => {
         <p className={styles.toggleLink} onClick={() => setIsRegistering(!isRegistering)}>
             {isRegistering ? 'Уже есть аккаунт? Войти.' : 'Нет аккаунта? Зарегистрироваться.'}
         </p>
+        {!!message && (
+            <div className={styles.popup}>
+                <span>{message}</span>
+                <span onClick={() => setMessage('')} className={styles.popupCross}>&times;</span>
+            </div>
+        )}
     </div>
   );
 };
