@@ -170,3 +170,20 @@
         margin-left: 0;
     }
 }
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .recipe {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .image {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .form {
+        width: 50vw;
+        margin-top: 0;
+    }
+}
