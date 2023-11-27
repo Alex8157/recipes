@@ -16,6 +16,11 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   background-color: var(--background-color);
