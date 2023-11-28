@@ -13,7 +13,6 @@
 
 .image {
     width: 400px;
-    height: 400px;
     box-shadow: var(--shadow);
     object-fit: cover;
 }
@@ -121,7 +120,6 @@
 @media screen and (max-width: 1024px) {
     .image {
         width: 300px;
-        height: 300px;
     }
 
     .form {
@@ -137,7 +135,6 @@
 
     .image {
         width: 90vw;
-        height: 90vw;
     }
 
     .form {
@@ -179,7 +176,6 @@
 
     .image {
         width: 30vw;
-        height: 30vw;
     }
 
     .form {

@@ -43,7 +43,7 @@ const AddEditRecipe = () => {
             setMessage('Выберите категорию');
             return;
         }
-        setMessage('Ожидание ответа вервера');
+        setMessage('Ожидание ответа сервера');
         if (id) {
             //редактировать
             const status = await PostService.editRecipe({ id, name, description, image, category: categoryId, ingredients, cookingSteps });
